@@ -3,55 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stoner Rock PE - Acervo</title>
-    <!-- CHAMANDO O CSS EXTERNO -->
-    <link rel="stylesheet" href="css/style.css">
+    <title>ACERVO STONER ROCK PE</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<div class="exploitation-header">
-    <img src="img/banner.jpg" alt="Stoner Rock PE Header">
-    <div class="overlay-text">
-        <h1>STONER ROCK PE</h1>
-        <p style="color: #fff; font-weight: bold; text-shadow: 2px 2px #000; margin-top: 10px;">RARIDADES DO DESERTO & DISTORÇÕES</p>
+<header>
+    <div class="logo">ACERVO STONER ROCK PE</div>
+    <nav>
+        <a href="#historia">SOBRE</a>
+    </nav>
+</header>
+
+<div class="hero-banner">
+    <div class="login-box">
+        <h1 class="neon-text">ACESSO AO ACERVO</h1>
+        <div class="credentials">
+            <div class="cred-item">USUÁRIO: <span>Ouvinte</span></div>
+            <div class="cred-item">SENHA: <span>Stoner</span></div>
+        </div>
+        <p class="warning">MARQUE "LEMBRAR" PARA NÃO PRECISAR LOGAR NOVAMENTE</p>
     </div>
 </div>
 
-<div class="acervo-box">
-    <h2 style="margin: 0 0 15px 0; letter-spacing: 2px; text-transform: uppercase;">Acesse o Acervo Musical</h2>
-    <div style="margin-bottom: 25px; font-size: 1.1em; line-height: 1.6; color: #eee;">
-        <p>Ouça a nossa biblioteca pelo Navidrome:</p>
-        <p>USUÁRIO: <strong style="color: #f1c40f;">Ouvinte</strong></p>
-        <p>SENHA: <strong style="color: #f1c40f;">Stoner</strong></p>
-    </div>
-    <a href="/player/" target="_blank" rel="noopener noreferrer" class="btn-player">ENTRAR NO REPOSITÓRIO</a>
-</div>
+<div class="container">
+    <!-- COLUNA PRINCIPAL -->
+    <div class="main-content">
+        <h3>OUVIR AGORA</h3>
+        <div class="player-box">
+            <!-- Iframe com permissões para mobile e sandbox -->
+            <iframe 
+                src="/player/" 
+                name="navidrome_frame" 
+                id="navidrome_frame"
+                allow="autoplay; encrypted-media; clipboard-write"
+                allowfullscreen>
+            </iframe>
+        </div>
 
-<div class="apoio-container" style="text-align: center; padding: 20px; background: #111; border-radius: 12px; border: 1px solid #222;">
-    <h2 style="color: #fff; margin-bottom: 10px;">APOIE ESTE PROJETO</h2>
-    <p style="font-size: 14px; color: #bbb; line-height: 1.6;">Roda 24h <strong>Recife/PE</strong>.<br>Ajude a manter os álbuns online!</p>
-    
-    <div style="display: flex; flex-direction: column; gap: 15px; align-items: center; margin-top: 25px;">
-        
-        <!-- BOTÃO KO-FI -->
-        <a href="https://ko-fi.com/linuxds6" target="_blank" style="display: flex;">
-            <img height="36" style="border:0px; height:36px;" src="https://storage.ko-fi.com/cdn/kofi3.png?v=3" border="0" alt="Apoie no Ko-fi" />
-        </a>
-
-        <!-- BOTÃO PIX -->
-        <button onclick="copiarPix()" style="background-color: #32bcad; color: white; border: none; padding: 12px 25px; border-radius: 8px; font-weight: bold; cursor: pointer; width: 200px; transition: 0.3s;" onmouseover="this.style.backgroundColor='#28a093'" onmouseout="this.style.backgroundColor='#32bcad'">
-            💸 Apoiar via PIX
-        </button>
-        
+        <section id="historia" class="sobre-box">
+            <h2>SOBRE O ACERVO</h2>
+            <p>O <strong>Acervo Stoner Rock PE</strong> não é apenas um repositório de arquivos; é a memória viva de uma cena que fincou seus pés no barro e na distorção há mais de duas décadas.</p>
+            <p>Tudo começou nos anos 2000, quando eu e <strong>Francisco Olay</strong> decidimos que o deserto pernambucano precisava de uma trilha sonora à altura. Naquela época, o blog <strong>Stoner Rock PE</strong> era a nossa trincheira. Ali, compartilhávamos álbuns de bandas do mundo inteiro, conectando Recife ao fuzz global e alimentando os ouvidos de quem buscava algo além do óbvio.</p>
+            <p>Dessa troca de arquivos e conversas, surgiram mais do que amizades: surgiu o movimento. O blog foi a semente que fez brotar o <strong>Stoned Festival</strong> em Recife e deu força para o surgimento de bandas fundamentais como o <strong>Mondo Bizarro</strong>.</p>
+            <p>Nesse caminho, estreitamos laços e criamos irmandade com figuras carimbadas da nossa terra, como os parceiros da <strong>Piloto Automático</strong>, reforçando que o Stoner Rock em Pernambuco sempre foi sobre comunidade e som alto.</p>
+            <span class="callout">Aumente o volume</span>
+        </section>
     </div>
 
-    <hr style="border: 0; border-top: 1px solid #222; margin: 25px 0;">
-    <p style="font-size: 11px; color: #555; text-transform: uppercase; letter-spacing: 1px;">Servidor Independente</p>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h3>DESTAQUES</h3>
+
+        <div class="rec-item">
+            <p><strong>MANTER O ACERVO VIVO</strong></p>
+            <div class="support-card">
+                <p>Contribua com a manutenção do projeto independente.</p>
+                <a href="https://ko-fi.com/linuxds6" target="_blank" class="btn-sidebar-apoio">☕ APOIAR NO KO-FI</a>
+            </div>
+        </div>
+
+        <!-- SEÇÃO CÓLERA NO DESERTO -->
+        <div class="rec-item">
+            <p><strong>CÓLERA NO DESERTO</strong></p>
+            <div class="rec-thumb placeholder">
+                <span class="breve-tag">EM BREVE</span>
+            </div>
+            <p class="album-title">Novidades a caminho...</p>
+        </div>
+
+        <!-- SEÇÃO STONED FESTIVAL -->
+        <div class="rec-item">
+            <p><strong>STONED FESTIVAL</strong></p>
+            <div class="rec-thumb placeholder">
+                <span class="breve-tag">EM BREVE</span>
+            </div>
+            <p class="album-title">Galeria e registros</p>
+        </div>
+
+        <footer class="sidebar-footer">
+            <p>STONER ROCK PE - 2026</p>
+            <p>PROJETO DE ACERVO INDEPENDENTE</p>
+        </footer>
+    </aside>
 </div>
 
-<footer>Stoner Rock PE - 2026</footer>
-
-<!-- CHAMANDO O JAVASCRIPT EXTERNO -->
-<script src="js/scripts.js"></script>
 </body>
 </html>
