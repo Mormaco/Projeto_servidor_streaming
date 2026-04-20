@@ -3,7 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ACERVO STONER ROCK PE</title>
+
+    <!-- SEO -->
+    <title>Acervo Stoner Rock PE</title>
+    <meta name="description" content="Acervo digital independente de Stoner Rock de Pernambuco. Streaming gratuito de álbuns raros, clássicos e registros da cena local de Recife.">
+    <meta name="keywords" content="stoner rock, pernambuco, recife, acervo, streaming, fuzz, doom, sludge">
+    <meta name="author" content="Acervo Stoner Rock PE">
+
+    <!-- Open Graph (WhatsApp, Telegram, redes sociais) -->
+    <meta property="og:title" content="Acervo Stoner Rock PE">
+    <meta property="og:description" content="Acervo digital independente do Stoner Rock pernambucano. Ouça agora, de graça.">
+    <meta property="og:image" content="https://acervo.stonerrockpe.lat/img/banner.jpg">
+    <meta property="og:url" content="https://acervo.stonerrockpe.lat">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Acervo Stoner Rock PE">
+    <meta name="twitter:description" content="Streaming independente de Stoner Rock de Pernambuco.">
+    <meta name="twitter:image" content="https://acervo.stonerrockpe.lat/img/banner.jpg">
+
     <link rel="stylesheet" href="/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -17,6 +36,7 @@
 </header>
 
 <div class="hero-banner">
+    <div class="hero-overlay"></div>
     <div class="login-box">
         <h1 class="neon-text">ACESSO AO ACERVO</h1>
         <div class="credentials">
@@ -29,27 +49,33 @@
 
 <div class="container">
     <div class="main-content">
-        
-        <div class="disclaimer-container" style="margin-bottom: 30px; padding: 15px; border: 1px solid #444; background-color: rgba(0,0,0,0.5); border-radius: 8px;">
-            <h3 style="color: #32bcad; font-size: 16px; margin-top: 0; font-family: 'Oswald', sans-serif;">⚠️ Aviso aos Artistas e Detentores de Direitos</h3>
-            <p style="color: #ccc; font-size: 13px; line-height: 1.6; text-align: justify; margin-bottom: 10px;">
-                Este é um acervo sem fins lucrativos dedicado à <strong>preservação e memória cultural</strong> do Stoner Rock e gêneros afins. 
-                Se você é o autor ou detentor dos direitos de algum álbum aqui listado e não deseja que ele esteja disponível para audição, 
+
+        <div class="disclaimer-container">
+            <h3 class="disclaimer-title">⚠️ Aviso aos Artistas e Detentores de Direitos</h3>
+            <p class="disclaimer-text">
+                Este é um acervo sem fins lucrativos dedicado à <strong>preservação e memória cultural</strong> do Stoner Rock e gêneros afins.
+                Se você é o autor ou detentor dos direitos de algum álbum aqui listado e não deseja que ele esteja disponível para audição,
                 solicite a remoção imediata.
             </p>
-            <p style="color: #fff; font-size: 14px; font-weight: bold; margin-bottom: 0;">
-                📩 Contato: <a href="mailto:linuxds6@proton.me" style="color: #32bcad; text-decoration: none;">linuxds6@proton.me</a>
+            <p class="disclaimer-contact">
+                📩 Contato: <a href="mailto:linuxds6@proton.me" class="disclaimer-link">linuxds6@proton.me</a>
             </p>
         </div>
 
         <h3>OUVIR AGORA</h3>
         <div class="player-box">
+            <div class="player-loading" id="player-loading">
+                <span class="loading-icon">🎸</span>
+                <p>Carregando o acervo...</p>
+            </div>
             <iframe
+                title="Player Navidrome — Acervo Stoner Rock PE"
                 src="/player/"
                 name="navidrome_frame"
                 id="navidrome_frame"
                 allow="autoplay; encrypted-media; clipboard-write"
-                allowfullscreen>
+                allowfullscreen
+                onload="document.getElementById('player-loading').style.display='none'">
             </iframe>
         </div>
 
@@ -70,7 +96,7 @@
             <p><strong>MANTER O ACERVO VIVO</strong></p>
             <div class="support-card">
                 <p>Contribua com a manutenção do projeto independente.</p>
-                <a href="https://ko-fi.com/linuxds6" target="_blank" class="btn-sidebar-apoio">☕ APOIAR NO KO-FI</a>
+                <a href="https://ko-fi.com/linuxds6" target="_blank" rel="noopener noreferrer" class="btn-sidebar-apoio">☕ APOIAR NO KO-FI</a>
             </div>
         </div>
 
@@ -92,5 +118,20 @@
     </aside>
 </div>
 
+<footer class="site-footer">
+    <div class="footer-inner">
+        <p class="footer-brand">ACERVO STONER ROCK PE</p>
+        <p class="footer-sub">Servidor independente &mdash; Recife, PE &mdash; 2026</p>
+        <p class="footer-sub">
+            <a href="mailto:linuxds6@proton.me" class="footer-link">linuxds6@proton.me</a>
+            &nbsp;|&nbsp;
+            <a href="https://ko-fi.com/linuxds6" target="_blank" rel="noopener noreferrer" class="footer-link">Ko-fi</a>
+        </p>
+        <p class="footer-sub footer-disclaimer">Acervo sem fins lucrativos para preservação cultural. Solicitações de remoção pelo e-mail acima.</p>
+    </div>
+</footer>
+
+<script src="/js/scripts.js"></script>
 </body>
 </html>
+
