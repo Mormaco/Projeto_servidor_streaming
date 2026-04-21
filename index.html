@@ -10,128 +10,169 @@
     <meta name="keywords" content="stoner rock, pernambuco, recife, acervo, streaming, fuzz, doom, sludge">
     <meta name="author" content="Acervo Stoner Rock PE">
 
-    <!-- Open Graph (WhatsApp, Telegram, redes sociais) -->
+    <!-- Open Graph -->
     <meta property="og:title" content="Acervo Stoner Rock PE">
     <meta property="og:description" content="Acervo digital independente do Stoner Rock pernambucano. Ouça agora, de graça.">
     <meta property="og:image" content="https://acervo.stonerrockpe.lat/img/banner.jpg">
     <meta property="og:url" content="https://acervo.stonerrockpe.lat">
     <meta property="og:type" content="website">
-
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Acervo Stoner Rock PE">
-    <meta name="twitter:description" content="Streaming independente de Stoner Rock de Pernambuco.">
-    <meta name="twitter:image" content="https://acervo.stonerrockpe.lat/img/banner.jpg">
 
     <link rel="stylesheet" href="/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Special+Elite&family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 </head>
 <body>
 
-<header>
-    <div class="logo">ACERVO STONER ROCK PE</div>
-    <nav>
-        <a href="#historia">SOBRE</a>
-    </nav>
+<!-- Grain overlay -->
+<div class="grain"></div>
+
+<!-- HEADER -->
+<header class="site-header">
+    <div class="header-inner">
+        <div class="header-logo">
+            <span class="logo-top">ACERVO</span>
+            <span class="logo-main">STONER ROCK PE</span>
+            <span class="logo-sub">— RECIFE · DESDE OS ANOS 2000 —</span>
+        </div>
+        <nav class="header-nav">
+            <a href="#player">OUVIR</a>
+            <a href="#historia">SOBRE</a>
+            <a href="https://ko-fi.com/linuxds6" target="_blank" rel="noopener noreferrer" class="nav-apoio">APOIAR</a>
+        </nav>
+    </div>
 </header>
 
-<div class="hero-banner">
-    <div class="hero-overlay"></div>
-    <div class="login-box">
-        <h1 class="neon-text">ACESSO AO ACERVO</h1>
-        <div class="credentials">
-            <div class="cred-item">USUÁRIO: <span>Ouvinte</span></div>
-            <div class="cred-item">SENHA: <span>Stoner</span></div>
-        </div>
-        <p class="warning">MARQUE "LEMBRAR" PARA NÃO PRECISAR LOGAR NOVAMENTE</p>
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+        <div class="hero-tag">FUNK · FUZZ · DOOM · SLUDGE</div>
+        <h1 class="hero-title">O DESERTO<br><em>TAMBÉM</em><br>TEM SOM</h1>
+        <p class="hero-desc">Duas décadas de Stoner Rock pernambucano</p>
+        <a href="#player" class="hero-cta">▶ ENTRAR NO ACERVO</a>
     </div>
-</div>
+    <div class="hero-credentials">
+        <div class="cred-label">ACESSO PÚBLICO</div>
+        <div class="cred-row"><span class="cred-key">USUÁRIO</span><span class="cred-val">Ouvinte</span></div>
+        <div class="cred-row"><span class="cred-key">SENHA</span><span class="cred-val">Stoner</span></div>
+        <p class="cred-tip">Marque "lembrar" para não precisar logar novamente</p>
+    </div>
+</section>
 
-<div class="container">
-    <div class="main-content">
-
-        <div class="disclaimer-container">
-            <h3 class="disclaimer-title">⚠️ Aviso aos Artistas e Detentores de Direitos</h3>
-            <p class="disclaimer-text">
-                Este é um acervo sem fins lucrativos dedicado à <strong>preservação e memória cultural</strong> do Stoner Rock e gêneros afins.
-                Se você é o autor ou detentor dos direitos de algum álbum aqui listado e não deseja que ele esteja disponível para audição,
-                solicite a remoção imediata.
-            </p>
-            <p class="disclaimer-contact">
-                📩 Contato: <a href="mailto:linuxds6@proton.me" class="disclaimer-link">linuxds6@proton.me</a>
-            </p>
+<!-- PLAYER -->
+<section id="player" class="player-section">
+    <div class="section-label">// WEBPLAYER </div>
+    <div class="player-frame-wrapper">
+        <div class="player-scanlines"></div>
+        <div class="player-header">
+            <span class="player-dot red"></span>
+            <span class="player-dot yellow"></span>
+            <span class="player-dot green"></span>
+            <span class="player-title-bar">ACERVO STONER ROCK PE</span>
         </div>
-
-        <h3>OUVIR AGORA</h3>
-        <div class="player-box">
-            <div class="player-loading" id="player-loading">
-                <span class="loading-icon">🎸</span>
-                <p>Carregando o acervo...</p>
+        <div class="player-loading" id="player-loading">
+            <div class="loading-bars">
+                <span></span><span></span><span></span><span></span><span></span>
             </div>
-            <iframe
-                title="Player Navidrome — Acervo Stoner Rock PE"
-                src="/player/"
-                name="navidrome_frame"
-                id="navidrome_frame"
-                allow="autoplay; encrypted-media; clipboard-write"
-                allowfullscreen
-                onload="document.getElementById('player-loading').style.display='none'">
-            </iframe>
+            <p>sintonizando frequência...</p>
+        </div>
+        <iframe
+            title="Player Navidrome — Acervo Stoner Rock PE"
+            src="/player/"
+            name="navidrome_frame"
+            id="navidrome_frame"
+            allow="autoplay; encrypted-media; clipboard-write"
+            allowfullscreen
+            onload="document.getElementById('player-loading').style.display='none'">
+        </iframe>
+    </div>
+</section>
+
+<!-- DESTAQUES / SIDEBAR -->
+<section class="destaques-section">
+    <div class="destaques-inner">
+
+        <div class="destaque-card apoio-card">
+            <div class="card-fita">APOIE O PROJETO</div>
+            <p>Servidor independente. Sem ads. Sem algoritmo.</p>
+            <a href="https://ko-fi.com/linuxds6" target="_blank" rel="noopener noreferrer" class="btn-apoio">☕ KO-FI</a>
+
+            <div class="pix-area">
+                <div class="pix-divider">— ou via PIX —</div>
+                <button class="btn-pix" onclick="copiarPix(this)">📋 COPIAR CHAVE PIX</button>
+                <div class="pix-qr-toggle">
+                    <button class="btn-qr-toggle" onclick="toggleQR()">▼ VER QR CODE</button>
+                    <div class="pix-qr-wrapper" id="pix-qr-wrapper">
+                        <div id="pix-qrcode"></div>
+                        <p class="pix-qr-label">linuxds6@proton.me</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <section id="historia" class="sobre-box">
-            <h2>SOBRE O ACERVO</h2>
+        <div class="destaque-card breve-card">
+            <div class="card-fita">EM BREVE</div>
+            <div class="breve-poster">
+                <span>CÓLERA</span>
+                <span>NO</span>
+                <span>DESERTO</span>
+            </div>
+            <p class="breve-sub">Novidades a caminho</p>
+        </div>
+
+        <div class="destaque-card breve-card">
+            <div class="card-fita">EM BREVE</div>
+            <div class="breve-poster festival">
+                <span>STONED</span>
+                <span>FESTIVAL</span>
+            </div>
+            <p class="breve-sub">Galeria e registros</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- SOBRE -->
+<section id="historia" class="sobre-section">
+    <div class="sobre-inner">
+        <div class="sobre-tag">// MEMÓRIA DA CENA</div>
+        <h2 class="sobre-title">SOBRE O ACERVO</h2>
+        <div class="sobre-texto">
             <p>O <strong>Acervo Stoner Rock PE</strong> não é apenas um repositório de arquivos; é a memória viva de uma cena que fincou seus pés no barro e na distorção há mais de duas décadas.</p>
-            <p>Tudo começou nos anos 2000, quando eu e <strong>Francisco Olay</strong> decidimos que o deserto pernambucano precisava de uma trilha sonora à altura. Naquela época, o blog <strong>Stoner Rock PE</strong> era a nossa trincheira. Ali, compartilhávamos álbuns de bandas do mundo inteiro, conectando Recife ao fuzz global e alimentando os ouvidos de quem buscava algo além do óbvio.</p>
+            <p>Tudo começou nos anos 2000, quando eu e <strong>Francisco Olay</strong> decidimos que o deserto pernambucano precisava de uma trilha sonora à altura. Naquela época, o blog <strong>Stoner Rock PE</strong> era a nossa trincheira. Ali, compartilhávamos álbuns de bandas do mundo inteiro, conectando Recife ao fuzz global.</p>
             <p>Dessa troca de arquivos e conversas, surgiram mais do que amizades: surgiu o movimento. O blog foi a semente que fez brotar o <strong>Stoned Festival</strong> em Recife e deu força para o surgimento de bandas fundamentais como o <strong>Mondo Bizarro</strong>.</p>
-            <p>Nesse caminho, estreitamos laços e criamos irmandade com figuras carimbadas da nossa terra, como os parceiros da <strong>Piloto Automático</strong>, reforçando que o Stoner Rock em Pernambuco sempre foi sobre comunidade e som alto.</p>
-            <span class="callout">Aumente o volume</span>
-        </section>
+            <p>Nesse caminho, estreitamos laços com figuras carimbadas da nossa terra, como os parceiros da <strong>Piloto Automático</strong>, reforçando que o Stoner Rock em Pernambuco sempre foi sobre comunidade e som alto.</p>
+        </div>
+        <div class="sobre-callout">AUMENTE O VOLUME</div>
     </div>
+</section>
 
-    <aside class="sidebar">
-        <h3>DESTAQUES</h3>
-
-        <div class="rec-item">
-            <p><strong>MANTER O ACERVO VIVO</strong></p>
-            <div class="support-card">
-                <p>Contribua com a manutenção do projeto independente.</p>
-                <a href="https://ko-fi.com/linuxds6" target="_blank" rel="noopener noreferrer" class="btn-sidebar-apoio">☕ APOIAR NO KO-FI</a>
-            </div>
+<!-- DISCLAIMER -->
+<section class="disclaimer-section">
+    <div class="disclaimer-inner">
+        <span class="disclaimer-icon">⚠</span>
+        <div class="disclaimer-texto">
+            <strong>Aviso aos Artistas e Detentores de Direitos</strong>
+            <p>Acervo sem fins lucrativos dedicado à preservação e memória cultural do Stoner Rock. Se você é detentor dos direitos de algum álbum listado e não deseja que ele esteja disponível, solicite a remoção.</p>
+            <a href="mailto:linuxds6@proton.me" class="disclaimer-email">📩 linuxds6@proton.me</a>
         </div>
+    </div>
+</section>
 
-        <div class="rec-item">
-            <p><strong>CÓLERA NO DESERTO</strong></p>
-            <div class="rec-thumb placeholder">
-                <span class="breve-tag">EM BREVE</span>
-            </div>
-            <p class="album-title">Novidades a caminho...</p>
-        </div>
-
-        <div class="rec-item">
-            <p><strong>STONED FESTIVAL</strong></p>
-            <div class="rec-thumb placeholder">
-                <span class="breve-tag">EM BREVE</span>
-            </div>
-            <p class="album-title">Galeria e registros</p>
-        </div>
-    </aside>
-</div>
-
+<!-- FOOTER -->
 <footer class="site-footer">
     <div class="footer-inner">
-        <p class="footer-brand">ACERVO STONER ROCK PE</p>
-        <p class="footer-sub">Servidor independente &mdash; Recife, PE &mdash; 2026</p>
-        <p class="footer-sub">
-            <a href="mailto:linuxds6@proton.me" class="footer-link">linuxds6@proton.me</a>
-            &nbsp;|&nbsp;
-            <a href="https://ko-fi.com/linuxds6" target="_blank" rel="noopener noreferrer" class="footer-link">Ko-fi</a>
-        </p>
-        <p class="footer-sub footer-disclaimer">Acervo sem fins lucrativos para preservação cultural. Solicitações de remoção pelo e-mail acima.</p>
+        <div class="footer-logo">ACERVO STONER ROCK PE</div>
+        <div class="footer-links">
+            <a href="mailto:linuxds6@proton.me">linuxds6@proton.me</a>
+            <span>·</span>
+            <a href="https://ko-fi.com/linuxds6" target="_blank" rel="noopener noreferrer">Ko-fi</a>
+        </div>
+        <p class="footer-copy">Servidor independente · Recife, PE · 2026</p>
     </div>
 </footer>
 
 <script src="/js/scripts.js"></script>
 </body>
 </html>
-
